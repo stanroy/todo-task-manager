@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_transparent">#D3FFFFFF</color>
+    <color name="light_gray">#9C9C9C</color>
+    <color name="gray">#131313</color>
+    <color name="gray_transparent">#665A5959</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="red_200">#ffa6a5</color>
+    <color name="red_300">#ff8481</color>
+    <color name="red_400">#ff665e</color>
+    <color name="red_500">#ff5742</color>
+    <color name="red_700">#f3463d</color>
+    <color name="red_900">#d63529</color>
+    <color name="red_700_transparent">#66D63529</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_300">#FF8481c7</color>
+    <color name="purple_400">#FF6d65bb</color>
+    <color name="purple_500">#FF5749ae</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_900">#FF351876</color>
+    <color name="purple_transparent">#BC5749AE</color>
+
+    <color name="green_300">#FF81c784</color>
+    <color name="green_400">#FF66bb6b</color>
+    <color name="green_500">#FF4caf51</color>
+    <color name="green_900">#FF1b5e21</color>
+
+    <color name="pink_200">#FFc781c4</color>
+    <color name="pink_300">#FFb04eac</color>
+
+    <color name="teal_200">#FF81c4c7</color>
+    <color name="teal_700">#FF018786</color>
+
+</resources>

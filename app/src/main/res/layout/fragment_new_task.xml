@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.stanroy.todotaskmanager.presentation.new_task.NewTaskViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red_700_transparent"
+            android:elevation="@dimen/elevation_10dp"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red_200"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_20dp"
+            tools:context=".presentation.new_task.NewTaskFragment">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fadeScrollbars="true"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbarThumbVertical="@drawable/scrollbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_task_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="@string/hint_task"
+                            android:imeOptions="actionDone"
+                            android:padding="@dimen/padding_25dp"
+                            android:text="@={viewModel.taskName}"
+                            android:textColor="?attr/colorPrimaryVariant" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dropdown_category"
+                        style="@style/DropDownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:hint="@string/hint_category"
+                        android:textColor="@color/red_400">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/actv_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edit_text_bg"
+                            android:inputType="none"
+                            android:padding="@dimen/padding_25dp"
+                            android:text="@={viewModel.categorySelection}"
+                            android:textColor="@color/red_400" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:theme="@style/DateTimePicker">
+
+                        <DatePicker
+                            android:id="@+id/date_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_20dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:calendarViewShown="false"
+                            android:datePickerMode="spinner"
+                            android:day="@={viewModel.day}"
+                            android:minDate="2021"
+                            android:month="@={viewModel.month}"
+                            android:year="@={viewModel.year}" />
+
+                        <TimePicker
+                            android:id="@+id/time_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/margin_20dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hour="@={viewModel.hour}"
+                            android:minute="@={viewModel.minute}"
+                            android:timePickerMode="spinner" />
+
+                        <!--                    android:onDateChanged="@{(v, year, month, day) -> viewModel.onDateChanged(year, month, day)}"-->
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:minWidth="150dp"
+                    android:paddingHorizontal="40dp"
+                    android:text="@string/btn_text_cancel"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_add_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:minWidth="150dp"
+                    android:paddingHorizontal="40dp"
+                    android:text="@string/btn_text_add"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

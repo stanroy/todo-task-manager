@@ -1,0 +1,101 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ToDoTaskManager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red_400</item>
+        <item name="colorPrimaryVariant">@color/red_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_200</item>
+        <item name="colorSecondaryVariant">@color/purple_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:textViewStyle">@style/AsapTextViewStyle</item>
+
+        <item name="textInputStyle">@style/Theme.TextInputLayout</item>
+
+        <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
+    </style>
+
+
+    <style name="Theme.ToDoTaskManager.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="AsapTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/asap</item>
+    </style>
+
+    <style name="Theme.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:backgroundTint">@color/red_400</item>
+    </style>
+
+    <style name="Theme.SingleTaskItemStyle" parent="Theme.MaterialComponents">
+        <item name="android:background">@color/white</item>
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:textColor">@color/red_200</item>
+        <item name="android:textSize">18sp</item>
+
+        <item name="android:autoSizeMaxTextSize">18sp</item>
+        <item name="android:autoSizeMinTextSize">12sp</item>
+        <item name="android:autoSizeStepGranularity">2sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:hyphenationFrequency">none</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:minLines">2</item>
+
+
+    </style>
+
+    <style name="Theme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:textColorHint">@color/red_200</item>
+    </style>
+
+    <style name="DateTimePicker">
+        <item name="android:textColorPrimary">@color/red_700</item>
+        <item name="colorControlNormal">@color/red_400</item>
+    </style>
+
+
+    <style name="DropDownMenu" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:textColorHint">@color/red_200</item>
+        <item name="endIconTint">@color/red_400</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_20dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_20dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_20dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_20dp</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.App.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Snackbar</item>
+        <item name="actionTextColorAlpha">1</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Snackbar" parent="">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorOnSurface">@color/purple_200</item>
+    </style>
+
+    <style name="AlertBoxStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="FinishedTaskStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:background">@color/purple_transparent</item>
+        <item name="fontFamily">@font/asap_bolditalic</item>
+        <item name="android:textColor">@color/white_transparent</item>
+        <item name="android:textSize">50sp</item>
+
+    </style>
+
+</resources>
