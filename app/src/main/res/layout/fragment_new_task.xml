@@ -58,6 +58,7 @@
                             android:background="@drawable/edit_text_bg"
                             android:hint="@string/hint_task"
                             android:imeOptions="actionDone"
+                            android:singleLine="true"
                             android:padding="@dimen/padding_25dp"
                             android:text="@={viewModel.taskName}"
                             android:textColor="?attr/colorPrimaryVariant" />

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -85,6 +86,7 @@ class NewTaskFragment : Fragment() {
                     val action =
                         NewTaskFragmentDirections.actionNewTaskFragmentToTasksListFragment()
                     action.wasTaskAdded = true
+
                     findNavController().navigate(action)
                     Snackbar.make(
                         requireView(),
@@ -116,10 +118,11 @@ class NewTaskFragment : Fragment() {
 
     private fun initializeDropDownCategoryAdapter() {
         val items = arrayOf(WORK, PERSONAL, SHOPPING, HOBBY, OTHERS)
-        val adapter = NoFilterArrayAdapter(requireContext(), R.layout.dropdown_category_item, items)
+//        val adapter = NoFilterArrayAdapter(requireContext(), R.layout.dropdown_category_item, items)
+        val adapter = ArrayAdapter(requireContext(), R.layout.dropdown_category_item, items)
 
         binding.actvCategory.setAdapter(adapter)
-        binding.actvCategory.freezesText = false
+        //binding.actvCategory.freezesText = false
     }
 
     private fun initializeTimePicker() {
